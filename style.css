@@ -1,0 +1,37 @@
+:root {
+  color-scheme: light;
+  --paper: #faf9f5;
+  --ink: #202b29;
+  --muted: #4f605b;
+  --line: #ccd5cf;
+  --accent: #145d48;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: Arial, "Thonburi", sans-serif; font-size: 1rem; line-height: 1.7; }
+a { color: var(--accent); text-underline-offset: .2em; overflow-wrap: anywhere; }
+a:hover { text-decoration-thickness: .15em; }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+.wrap { width: min(100% - 2.5rem, 48rem); margin-inline: auto; }
+header { border-bottom: 1px solid var(--line); padding-block: 1.25rem; }
+.brand { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; text-decoration: none; letter-spacing: .01em; }
+nav { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; }
+nav a { display: inline-flex; min-height: 44px; align-items: center; }
+nav a[aria-current="page"] { font-weight: 700; }
+main { padding-block: 2.5rem 3.5rem; }
+h1, h2 { line-height: 1.2; text-wrap: balance; }
+h1 { font-family: Georgia, "Thonburi", serif; font-size: clamp(2.1rem, 7vw, 3.25rem); font-weight: 400; margin: .5rem 0 1rem; letter-spacing: -.025em; }
+h2 { font-size: 1.25rem; margin: 0 0 .75rem; }
+p { margin: 0 0 1rem; }
+.kicker, .reviewed { color: var(--muted); font-size: .9rem; }
+.kicker { letter-spacing: .08em; text-transform: uppercase; }
+.lead { font-size: 1.15rem; }
+section { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
+ul { padding-left: 1.3rem; }
+li { padding-left: .15rem; margin-block: .5rem; }
+.notice { background: #eaf0ea; padding: 1.25rem; margin-block: 1.5rem; }
+.notice p:last-child, section p:last-child { margin-bottom: 0; }
+footer { border-top: 1px solid var(--line); padding-block: 1.5rem 2rem; color: var(--muted); font-size: .9rem; }
+.skip { position: absolute; left: 1rem; top: -8rem; background: var(--paper); padding: .75rem; }
+.skip:focus { top: .5rem; }
+@media (min-width: 40rem) { .header-inner { display: flex; justify-content: space-between; align-items: center; gap: 1rem; } main { padding-top: 3.5rem; } }
+@media print { body { background: white; font-size: 12pt; } .wrap { width: 100%; } nav, .skip { display: none; } main { padding-block: 1rem; } section { break-inside: avoid; } }
